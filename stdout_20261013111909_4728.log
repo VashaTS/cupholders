@@ -1,0 +1,357 @@
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\inetpub\wwwroot\Narzedziownia
+info: LuckyPennySoftware.MediatR.License[0]
+      You have a valid license key for the Lucky Penny software Bundle Community edition. The license expires on 10/11/2027 00:00:00 +00:00.
+info: LuckyPennySoftware.MediatR.License[0]
+      You have a valid license key for the Lucky Penny software Bundle Community edition. The license expires on 10/11/2027 00:00:00 +00:00.
+info: LuckyPennySoftware.MediatR.License[0]
+      You have a valid license key for the Lucky Penny software Bundle Community edition. The license expires on 10/11/2027 00:00:00 +00:00.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+Needs REST API update
+info: System.Net.Http.HttpClient.GTISClient.LogicalHandler[100]
+      Start processing HTTP request GET https://nto-gtisp04.europe.phoenixcontact.com:1923/export/digital-fifo-board/orders/in-work/poland
+info: System.Net.Http.HttpClient.GTISClient.ClientHandler[100]
+      Sending HTTP request GET https://nto-gtisp04.europe.phoenixcontact.com:1923/export/digital-fifo-board/orders/in-work/poland
+info: System.Net.Http.HttpClient.GTISClient.ClientHandler[101]
+      Received HTTP response headers after 1676.5766ms - 200
+info: System.Net.Http.HttpClient.GTISClient.LogicalHandler[101]
+      End processing HTTP request after 1684.489ms - 200
+[13:25:01] Received 1088 orders from GTIS API.
+fail: API.Middleware.ErrorHandlingMiddleware[0]
+      SERVER ERROR
+      System.NullReferenceException: Object reference not set to an instance of an object.
+         at Application.fifo.getFifoOptWcf.Handler.<>c__DisplayClass8_0.<Handle>b__1(ExportDataOrderPoland item) in C:\proj\pxcw_narzedziownia-main9\Application\fifo\getFifoOptWcf.cs:line 355
+         at System.Collections.Generic.List`1.ForEach(Action`1 action)
+         at Application.fifo.getFifoOptWcf.Handler.<>c__DisplayClass8_0.<Handle>b__0() in C:\proj\pxcw_narzedziownia-main9\Application\fifo\getFifoOptWcf.cs:line 140
+         at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+      --- End of stack trace from previous location ---
+         at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+         at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+      --- End of stack trace from previous location ---
+         at Application.fifo.getFifoOptWcf.Handler.Handle(Query request, CancellationToken cancellationToken) in C:\proj\pxcw_narzedziownia-main9\Application\fifo\getFifoOptWcf.cs:line 139
+         at API.Controllers.FifoController.List() in C:\proj\pxcw_narzedziownia-main9\api\Controllers\FifoController.cs:line 19
+         at lambda_method982(Closure, Object)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at SecurityHeadersMiddleware.Invoke(HttpContext context) in C:\proj\pxcw_narzedziownia-main9\api\Middleware\SecurityHeadersMiddleware.cs:line 29
+         at NWebsec.AspNetCore.Middleware.Middleware.CspMiddleware.Invoke(HttpContext context)
+         at NWebsec.AspNetCore.Middleware.Middleware.MiddlewareBase.Invoke(HttpContext context)
+         at NWebsec.AspNetCore.Middleware.Middleware.MiddlewareBase.Invoke(HttpContext context)
+         at NWebsec.AspNetCore.Middleware.Middleware.MiddlewareBase.Invoke(HttpContext context)
+         at NWebsec.AspNetCore.Middleware.Middleware.MiddlewareBase.Invoke(HttpContext context)
+         at API.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\proj\pxcw_narzedziownia-main9\api\Middleware\ErrorHandlingMiddleware.cs:line 25
+end.
+end.
+end.
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+end.
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 447.3246ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 447.5448ms - 200
+end.
+end.
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 266.3889ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 266.5922ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 310.764ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 310.8652ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 435.1689ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 435.2542ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 487.9934ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 488.078ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 607.3268ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 607.4085ms - 200
+end.
+end.
+end.
+end.
+end.
+end.
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 276.8548ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 277.0025ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 291.2029ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 291.3623ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 447.6971ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 447.7826ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 441.3764ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 441.4485ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 554.4336ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 554.5063ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 649.4097ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 649.5436ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 371.563ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 371.6622ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 220.1666ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 220.2684ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 505.0974ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 505.1879ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 338.4711ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 338.634ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 212.1078ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 212.2194ms - 200
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+end.
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 264.8746ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 265.0745ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 263.149ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 263.2251ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+end.
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 229.4874ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 229.5733ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 583.4221ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 583.5043ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 222.6942ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 222.7851ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 215.7308ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 215.8361ms - 200
+end.
+end.
+end.
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 265.6205ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 265.7375ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 263.909ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 264.0032ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 302.002ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 302.0868ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request GET https://api.phoenixcontact.com/mes-api/v1/DataProvider/GetMachine?*
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 212.59ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 212.66ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 211.5177ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 211.5919ms - 200
+end.
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 367.8635ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 367.9514ms - 200
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 378.3957ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 378.5338ms - 200
+end.
+end.
+Needs REST API update
+info: System.Net.Http.HttpClient.GTISClient.LogicalHandler[100]
+      Start processing HTTP request GET https://nto-gtisp04.europe.phoenixcontact.com:1923/export/digital-fifo-board/orders/in-work/poland
+info: System.Net.Http.HttpClient.GTISClient.ClientHandler[100]
+      Sending HTTP request GET https://nto-gtisp04.europe.phoenixcontact.com:1923/export/digital-fifo-board/orders/in-work/poland
+info: System.Net.Http.HttpClient.GTISClient.ClientHandler[101]
+      Received HTTP response headers after 1580.8006ms - 200
+info: System.Net.Http.HttpClient.GTISClient.LogicalHandler[101]
+      End processing HTTP request after 1580.8997ms - 200
+[13:31:21] Received 1087 orders from GTIS API.
+fail: API.Middleware.ErrorHandlingMiddleware[0]
+      SERVER ERROR
+      System.NullReferenceException: Object reference not set to an instance of an object.
+         at Application.fifo.getFifoOptWcf.Handler.<>c__DisplayClass8_0.<Handle>b__1(ExportDataOrderPoland item) in C:\proj\pxcw_narzedziownia-main9\Application\fifo\getFifoOptWcf.cs:line 355
+         at System.Collections.Generic.List`1.ForEach(Action`1 action)
+         at Application.fifo.getFifoOptWcf.Handler.<>c__DisplayClass8_0.<Handle>b__0() in C:\proj\pxcw_narzedziownia-main9\Application\fifo\getFifoOptWcf.cs:line 140
+         at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+      --- End of stack trace from previous location ---
+         at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallbac
